@@ -1,5 +1,5 @@
 ### 商家查看交易详情demo
-在线查看效果地址：[http://localhost/shop_transaction/#/login](http://localhost/shop_transaction/#/login)
+在线查看效果地址：[http://yulei521.github.io/shop_transaction_demo/](http://yulei521.github.io/shop_transaction_demo/)
 #### 登录页面
 实现了简单的登录校验
 ![图片1](/img/1.jpg)
