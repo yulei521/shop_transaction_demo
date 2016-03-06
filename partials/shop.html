@@ -1,0 +1,87 @@
+<div ng-controler="shopController" id="shop">
+    <div class="title">
+        <span class="logo">校园星空 · 商家</span>
+        <span class="login-out link" data-toggle="modal" data-target="#logout">退出登录</span>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-xs-3 info-back" style="margin-left:0px; width:24.5%">
+                <span class="font14" style="padding-top: 29px" >人民大学</span>
+                <span class="font16" style="padding-top: 0px;" >小芳打印店</span>
+            </div>
+            <div class="col-md-3 col-xs-3 info-back">
+                <span class="font16">今日收入</span>
+                <span class="font28" ng-bind="(daily_income? daily_income:0) + 'F'">20F</span>
+                <span class="font14 bottom" ng-bind="(daily_income? daily_income/rate:0) +'元'">1元</span>
+            </div>
+            <div class="col-md-3 col-xs-3 info-back">
+                <span class="font16">本月收入</span>
+                <span class="font28" ng-bind="(monthly_income? monthly_income:0) + 'F'">20F</span>
+                <span class="font14 bottom" ng-bind="(monthly_income? monthly_income/rate:0) + '元'">1元</span>
+            </div>
+            <div class="col-md-3 col-xs-3 info-back" style="margin-right:0px; width:24.5%">
+                <span class="font16">累计总收入</span>
+                <span class="font28" ng-bind="(total_income? total_income:0)+'F'">20F</span>
+                <span class="font14 bottom" ng-bind="(total_income? total_income/rate:0) + '元'">1元</span>
+            </div>
+        </div>
+    </div>
+    <div class="container transaction">
+        <div class="row transaction-title">
+            <div class="col-md-2 col-xs-2">交易日期</div>
+            <div class="col-md-3 col-xs-3">收入</div>
+            <div class="col-md-3 col-xs-3">折扣现金</div>
+            <div class="col-md-3 col-xs-3">交易用户</div>
+        </div>
+        <div class="row transaction-value" ng-repeat="record in list" ng-style="{'background-color':($index%2==0)? 'default':'#DCDCE6'}">
+            <div class="col-md-2 col-xs-2" ng-bind="record.ctime">2015-11-12 11:20</div>
+            <div class="col-md-3 col-xs-3" ng-bind="record.how_much? (record.how_much+'F'):''">10F</div>
+            <div class="col-md-3 col-xs-3" ng-bind="record.how_much? (record.how_much/rate + '元'):''">1元</div>
+            <div class="col-md-3 col-xs-3" ng-bind="record.real_name">小明</div>
+        </div>
+        <div class="page">共<span ng-bind="transfer_list.length"></span>记录
+        <span><span ng-click="divList(0)" class="link">首页</span><span ng-click="divList(-1)" ng-show="currentPage > 0" class="link">上一页</span><span ng-click="divList(1)" ng-show="currentPage!=totalPage" class="link">下一页</span></div>
+    </div>
+</div>
+<!-- 退出登录模态框 -->
+<div class="modal fade" id="logout" tabindex="-1" role="dialog" aria-labelledby="logoutLabel" 
+aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <botton type="botton" class="close" data-dismiss="modal" aria-hidden="true">&times;</botton>
+                <h4 class="modal-title" id="logoutLabel">校园星空·商家
+                </h4>
+            </div>
+            <div class="modal-body">
+                确定要退出？
+            </div>
+            <div class="modal-footer">
+                <botton type="botton" class="btn btn-default" data-dismiss="modal">取消</botton>
+                <botton type="botton" class="btn btn-primary" ng-click="logout()">确认</botton>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="log" tabindex="-1" role="dialog" aria-labelledby="logLabel" 
+aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <botton type="botton" class="close" data-dismiss="modal" aria-hidden="true">&times;</botton>
+                <h4 class="modal-title" id="logabel">校园星空·商家
+                </h4>
+            </div>
+            <div class="modal-body">
+                确定要退出？
+            </div>
+            <div class="modal-footer">
+                <botton type="botton" class="btn btn-default" data-dismiss="modal">取消</botton>
+                <botton type="botton" class="btn btn-primary" ng-click="logout()">确认</botton>
+            </div>
+        </div>
+    </div>
+</div>
+
+
