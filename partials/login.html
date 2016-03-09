@@ -9,12 +9,10 @@
                     默认的用户名：admin,密码：admin
                 </div>
                 <div class="form-group">
-                    <lable>用户名：</lable>
                     <input class="form-control" ng-click="clearInfo()" placeholder="请输入用户名" type="text" ng-model="username">
                 </div>
                 <div class="form-group">
-                    <lable>密&nbsp;&nbsp;&nbsp;码：</lable>
-                    <input class="form-control" ng-click="clearInfo()" placeholder="请输入密码" type="password" style="margin-left:2px" ng-model="password">
+                    <input class="form-control" ng-click="clearInfo()" placeholder="请输入密码" type="password" ng-model="password">
                 </div>
                 <div class="error-info" ng-bind="errorInfo">
                     用户名或者密码错误
