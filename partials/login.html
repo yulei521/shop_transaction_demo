@@ -1,24 +1,26 @@
 <div ng-controller="loginController" id="login">
-    <div class="title row" style="margin-left:0px;margin-right:0px">
-        <div class="col-xs-4 col-md-4 col-offset-md-2 col-offset-xs-2">校园星空 · 商家登录</div>
-    </div>
-    <div class="container shop-info row">
+    <div class="title row">
         <div class="col-xs-4 col-md-4">
+            校园星空 · 商家登录
+        </div>
+    </div>
+    <div class="shop-info container">
+        <div class="row">
+            <div class="col-xs-6 col-md-4 col-xs-offset-3 col-md-offset-4">
+                用户名：admin 密码：admin
             <form id="shop-info" role="form">
                 <div class="form-group">
-                    默认的用户名：admin,密码：admin
+                    <input class="form-control" placeholder="请输入用户名" type="text" ng-model="username" ng-click="clearErrorInfo()">
                 </div>
                 <div class="form-group">
-                    <input class="form-control" ng-click="clearInfo()" placeholder="请输入用户名" type="text" ng-model="username">
-                </div>
-                <div class="form-group">
-                    <input class="form-control" ng-click="clearInfo()" placeholder="请输入密码" type="password" ng-model="password">
+                    <input name="password" class="form-control" placeholder="请输入密码" type="password" ng-model="password" ng-click="clearErrorInfo()">
                 </div>
                 <div class="error-info" ng-bind="errorInfo">
                     用户名或者密码错误
                 </div>
                 <botton type="submit" class="btn btn-default" ng-click="login()">登录</botton>
             </form>
+        </div>
         </div>
     </div>
 </div>
