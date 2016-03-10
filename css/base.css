@@ -6,11 +6,14 @@
 
 .error-info {
     color: red;
-    margin-left: 17%;
     padding-bottom: 10px;
 }
 
 /*交易记录页面 shop.html css样式*/
+
+#shop .close {
+    font-size: 30px;
+}
 
 #shop .title {
     background-color: rgb(53,160,237);
