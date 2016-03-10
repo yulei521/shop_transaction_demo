@@ -75,6 +75,11 @@ app.controller('shopController', function($scope, $location){
 });
 
 app.controller('loginController', function($scope, $location){
+    
+    function init(){
+        if(localStorage.user)$scope.username = localStorage.user;
+    }
+    
     $scope.clickInfo = function(){
         $scope.errorInfo = '';
     }
@@ -84,6 +89,7 @@ app.controller('loginController', function($scope, $location){
             if ($scope.password) {
                 if($scope.username == 'admin'){
                     if($scope.password == 'admin'){
+                        localStorage.user = "admin";
                         localStorage.cookie = "username";
                         $location.path('/');
                     }
@@ -99,4 +105,5 @@ app.controller('loginController', function($scope, $location){
             $scope.errorInfo = '*' + $scope.errorInfo;
         }
     }
+    init();
 });
