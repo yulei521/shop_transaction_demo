@@ -1,4 +1,7 @@
 /*这是shop(商家)查看交易记录页面公共css*/
+body {
+    font-size: 18px;
+}
 
 .modal-dialog {
     margin-top: 10%;
@@ -9,11 +12,30 @@
     padding-bottom: 10px;
 }
 
-/*交易记录页面 shop.html css样式*/
-
-#shop .close {
-    font-size: 30px;
+#newMessage {
+    background-color: rgba(0,0,0,0.75);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
 }
+
+h4 {
+    font-size: 28px;
+}
+
+.modal-body{
+    position: relative;
+    padding: 40px;
+    font-size: 20px;
+}
+
+.modal-footer .btn{
+    font-size: 18px;
+    padding: 10px 30px;
+}
+
+/*交易记录页面 shop.html css样式*/
 
 #shop .title {
     background-color: rgb(53,160,237);
@@ -22,7 +44,7 @@
     color: #ffffff;
     vertical-align: middle;
     line-height: 45px;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 #shop .logo {
@@ -34,6 +56,10 @@
     float: right;
     margin-right: 30px;
     cursor: pointer;
+}
+
+#shop .close {
+    font-size: 30px;
 }
 
 #shop .info-back {
@@ -129,39 +155,30 @@
 
 /*商家登录样式 login.html css*/
 #login .title {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 80px;
+    padding: 20px 10%;
     box-shadow: 0px 0px 4px rgba(0,0,0,0.5);
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
-    width: 100%;
-    display:block;
+    margin-bottom: 8%;
 }
 
 #login {
     overflow: hidden;
 }
 
-#login .shop-info {
-    margin-top: 8%;
-    margin-left: 33.33333%;
-}
-
-#login .shop-info span {
-    display: block;
-    float: left;
-}
 
 #login botton {
-    display: block;
     background-color: rgb(53,160,237);
     color: #ffffff;
     width: 100%;
+    font-size: 18px;
 }
 
 #login .form-control {
     display: inline;
     width: 100%;
+    padding: 10px 14px;
+    height: auto;
+    font-size: 20px;
 }
 
